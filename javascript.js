@@ -19,8 +19,8 @@ function playGame() {
   }
 
   function playRound(humanChoice, computerChoice) {
-    captalizedHumanChoice =
-      humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+    const captalizedHumanChoice = humanChoice.at(0).toUpperCase()
+                                + humanChoice.slice(1);
     let win;
 
     if (captalizedHumanChoice == computerChoice) {
