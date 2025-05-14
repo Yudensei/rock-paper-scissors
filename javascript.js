@@ -9,37 +9,38 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
+function captalizedHumanChoice() {
     return prompt("Rock, Paper or Scissors?", "rock").toLowerCase()
 }
 
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound (humanChoice, computerChoice) {   
-    //Makes humanChoice case insensitive 
-    humanChoice = humanChoice.toLowerCase();
+function playRound (humanChoice, computerChoice) {
+    captalizedHumanChoice = (humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase());
+    let win;
 
-    //Makes computerChoice have the same casing as humanChoice
-    if (humanChoice == computerChoice.toLowerCase()) {
+    if (captalizedHumanChoice == computerChoice) {
         console.log(`It's a tie! ${computerChoice} ties with ${computerChoice}`);
-    } else if (humanChoice == "rock" && computerChoice == "Scissors"){
-        console.log("You win! Rock beats Scissors");
+        return;
+    }
+    else if (captalizedHumanChoice == "Rock" && computerChoice == "Scissors") win = true;
+    
+    else if (captalizedHumanChoice == "Paper" && computerChoice == "Rock") win = true;
+    
+    else if (captalizedHumanChoice == "Scissors" && computerChoice == "Paper") win = true;
+    
+    else if (captalizedHumanChoice == "Rock" && computerChoice == "Paper") win = false;
+    
+    else if (captalizedHumanChoice == "Paper" && computerChoice == "Scissors") win = false;
+    
+    else if (captalizedHumanChoice == "Scissors") win = false;
+
+    if (win) {
+        console.log(`You win! ${captalizedHumanChoice} beats ${computerChoice}`);
         humanScore++;
-    } else if (humanChoice == "paper" && computerChoice == "Rock") {
-        console.log("You win! Paper beats Rock");
-        humanScore++;
-    } else if (humanChoice == "scissors" && computerChoice == "Paper") {
-        console.log("You win! Rock beats Scissors");
-        humanScore++;
-    } else if (humanChoice == "rock" && computerChoice == "Paper") {
-        console.log(`You lose! Paper beats Rock`);
-        computerScore++;
-    } else if (humanChoice == "paper" && computerChoice == "Scissors") {
-        console.log(`You lose! Scissors beats Paper`);
-        computerScore++;
-    } else if (humanChoice == "scissors") {
-        console.log(`You lose! Rock beats Scissors`);
+    } else {
+        console.log(`You lose! ${computerChoice} beats ${captalizedHumanChoice}`);
         computerScore++;
     }
 }
