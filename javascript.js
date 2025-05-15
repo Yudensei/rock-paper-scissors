@@ -82,10 +82,10 @@ function checkWinner() {
     return
   }
 
-  choiceButtons.style.display = "none";
-  resultMessage.textContent = ""
+  choiceButtons.style.visibility = "collapse";
+  resultMessage.textContent = "";
   playButton.style.visibility = "visible";
-}
+  }
 
 function getComputerChoice() {
   return Math.floor(Math.random() * 3);
