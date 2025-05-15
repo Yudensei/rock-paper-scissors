@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css"/>
+    <script defer src="javascript.js"></script>
+  </head>
+  <body>
+      <div id="scores">
+        <p id="humanScore">Your wins: <span>0</span></p>
+        <p id="computerScore">Bot wins: <span>0</span></p>
+      </div>
 
-    <script src="javascript.js"></script>
-    
-</body>
+      <div id="choiceButtons">
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+      </div>
+
+    <button id="playButton">Play</button>
+    <div id="result"></div>
+  </body>
 </html>
