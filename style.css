@@ -1,4 +1,83 @@
-#scores,
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light+Two&display=swap');
+
+body {
+    height: 100vh;
+    background-color: #3495eb;
+    font-family: "Shadows Into Light Two", sans-serif;
+}
+
+#game {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #choiceButtons {
-    display: none;
+    visibility: collapse;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#choiceButtons {
+    margin-top: 24px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 0 18px;
+}
+
+#choiceButtons img {
+    border-radius: 50%;
+}
+
+#Rock {
+    background-color: blueviolet;
+}
+
+#Paper {
+    background-color: coral;
+}
+
+#Scissors {
+    background-color: lightblue;
+}
+
+#left-div,
+#right-div {
+    margin-bottom: 7px;
+}
+
+#left-div :first-child,
+#right-div :first-child {
+    text-align: center;
+    margin-bottom: -50px;
+    font-size: 32px;
+}
+
+#result {
+    text-align: center;
+    font-size: 24px
+}
+
+#mainButton {
+    height: 100vh;
+    margin-top: -100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playButton {
+    padding: 25px 50px;
+    border: 2px solid rgb(88, 186, 247);   
+    background-color: #4198e4;
+    font-family: "Shadows Into Light Two", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
 }
